@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ruby: Write the Script</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--Brief page description:-->
+  <meta name="description" content="">
+  <!--Name(s) of primary authors-->
+  <meta name="author" content="Anthony T. Sansone">
+
+  <!--Styles-->
+  <link href="/assets/css/bootstrap.css" rel="stylesheet">
+  <link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="/assets/css/prettify.css" rel="stylesheet">
+
+  <!--Custom styles-->
+  <link href="/assets/css/custom.css" rel="stylesheet">
+
+  
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+
+<body class="ruby">
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+        <a class="brand" href="/">Bootcamp</a>
+          <ul class="nav">
+            <li><a href="/start/">Setup</a></li>
+            <li><a href="/git/">Git</a></li>
+            <li><a href="/md/">Markdown</a></li>
+            <li><a href="/html/">HTML</a></li>
+            <li><a href="/css/">CSS</a></li>
+            <li><a href="/js/">Javascript</a></li>
+            <li><a href="/ruby/">Ruby</a></li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header id="page-header">
+    <div class="container-fluid hero-unit">
+      <h1>Ruby</h1>
+    </div>
+  </header>
+
+  <div class="container-fluid">
+
+    <div class="row-fluid">
+      <nav class="span3 bs-docs-sidebar">
+        <ol class="nav nav-list bs-docs-sidenav">
+          
+          
+                    <li><a href="index.html"><i class="icon-chevron-right"></i> Why Program?</a></li>
+        <li><a href="01alreadyknow.html"><i class="icon-chevron-right"></i> What Should I Already Know?</a></li>
+        <li><a href="02tolearn.html"><i class="icon-chevron-right"></i> What Should I Learn?</a></li>
+        <li><a href="03whyruby.html"><i class="icon-chevron-right"></i> Why Ruby?</a></li>
+        <li><a href="04shell.html"><i class="icon-chevron-right"></i> Coming Out of Our Shell</a></li>
+        <li><a href="05operator.html"><i class="icon-chevron-right"></i> Operation: Operator</a></li>
+        <li><a href="06wordstasks.html"><i class="icon-chevron-right"></i> Words and Tasks</a></li>
+        <li><a href="07variations.html"><i class="icon-chevron-right"></i> Variations on a Theme</a></li>
+        <li><a href="08writescript.html"><i class="icon-chevron-right"></i> Write the Script</a></li>
+        <li><a href="09courselist0.html"><i class="icon-chevron-right"></i> Down to Business</a></li>
+        <li><a href="10courselistpass1.html"><i class="icon-chevron-right"></i> First Pass at A Course List</a></li>
+        <li><a href="11autohtml.html"><i class="icon-chevron-right"></i> Create HTML Automatically</a></li>
+        <li><a href="12instanthtml.html"><i class="icon-chevron-right"></i> Instant Course List</a></li>
+        <li><a href="13dry.html"><i class="icon-chevron-right"></i> Keep DRY</a></li>
+        <li><a href="14hash.html"><i class="icon-chevron-right"></i> That's Some Good Hash</a></li>
+        <li><a href="15rollercoasters.html"><i class="icon-chevron-right"></i> Roller Coasters</a></li>
+        <li><a href="16classes.html"><i class="icon-chevron-right"></i> Show Some Class</a></li>
+        <li><a href="17breakup.html"><i class="icon-chevron-right"></i> Breaking Up Is Hard</a></li>
+        <li><a href="18multiples.html"><i class="icon-chevron-right"></i> Once More with Feeling</a></li>
+        <li><a href="19writeitout.html"><i class="icon-chevron-right"></i> Write It Out</a></li>
+        <li><a href="20review.html"><i class="icon-chevron-right"></i> What Did We Learn?</a></li>
+        <li><a href="21resources.html"><i class="icon-chevron-right"></i> Where Can I Learn More?</a></li>
+
+
+
+          
+        </ol>
+      </nav>
+
+      <div class="span9">
+
+        <article id=" ">
+  <header class="page-header">
+    <h2>Write the Script</h2>
+  </header>
+  <section>
+
+    <p>IRB is great for trying out a few lines of code, but anything more substantial requires a different approach.</p>
+
+    <p>Ruby code can be written as text files called scripts. These scripts can then be called on the command line.</p>
+
+    <p>Open up a text editor and create a new file. In that file, type exactly what you did in IRB:</p>
+
+<pre class="prettyprint linenums">
+def hello
+  puts "What is your name?"
+  name = gets.chomp
+  puts "Hello " + name + "!"
+end
+
+hello
+</pre>
+
+    <p>The indenting is important. One of Ruby's biggest benefits is that it does not clutter up code with unnecessary parentheses, square brackets and curly brackets. It uses indentation to make clear what is in a block of code.</p>
+
+    <p>The call to <code>hello</code> is also very important. A method does not work unless it is called. To tell the script to call your method, you will need to include the method name on its own line with no other information.</p>
+
+    <p>Save this file as <code>first_script.rb</code>.</p>
+
+    <p>The <code>.rb</code> is the file extension for Ruby. This is the case on all platforms.</p>
+
+    <p>Now, we can try this script:</p>
+
+    <p>Open up your command line</p>
+    <p>Type <code>ruby first_script.rb</code></p>
+
+<pre class="prettyprint linenums">
+d:\Dropbox\Grad School Projects\535\ruby>ruby first_script.rb
+What is your name?
+Tony
+Hello Tony!
+</pre>
+
+    <p>Congratulations! You have just written your first Ruby script!</p>
+
+    <p>From here, all Ruby coding will be done with Ruby scripts instead of IRB. You can test out ideas or try out code blocks using IRB, but full scripts will be easier to manage going forward, especially using Git.</p>
+
+  </section>
+  <footer>
+    <ul class="pager">
+      <li><a href="06wordstasks.html">Previous</a></li>
+      <li><a href="09courselist0.html">Next</a></li>
+    </ul>
+    <h5>Progress in This Tutorial</h5>
+    <div class="progress progress-striped">
+      <div class="bar" style="width: 40.5%;"></div>
+    </div>
+  </footer>
+</article>
+
+
+
+      </div><!--/.span9 -->
+
+    </div><!--/.row-fluid -->
+
+  </div><!--/.container-fluid-->
+
+  <footer id="page-footer" class="container-fluid">
+    <p>Licensed under Creative Commons. Created by Anthony T. Sansone</p>
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/bootstrap.min.js"></script>
+  <script src="/assets/js/bootstrap-transition.js"></script>
+  <script src="/assets/js/prettify/prettify.js"></script>
+
+  
+
+</body>
+</html>
+

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CSS: Declarations</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--Brief page description:-->
+  <meta name="description" content="How to style element selectors with CSS rules
+">
+  <!--Name(s) of primary authors-->
+  <meta name="author" content="Christine McClure">
+
+  <!--Styles-->
+  <link href="/assets/css/bootstrap.css" rel="stylesheet">
+  <link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="/assets/css/prettify.css" rel="stylesheet">
+
+  <!--Custom styles-->
+  <link href="/assets/css/custom.css" rel="stylesheet">
+
+  
+  <!--Per-page stylesheets-->
+    
+      <link href="/assets/css/css-chapter-examples.css" rel="stylesheet">
+    
+  
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+
+<body class="css">
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+        <a class="brand" href="/">Bootcamp</a>
+          <ul class="nav">
+            <li><a href="/start/">Setup</a></li>
+            <li><a href="/git/">Git</a></li>
+            <li><a href="/md/">Markdown</a></li>
+            <li><a href="/html/">HTML</a></li>
+            <li><a href="/css/">CSS</a></li>
+            <li><a href="/js/">Javascript</a></li>
+            <li><a href="/ruby/">Ruby</a></li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header id="page-header">
+    <div class="container-fluid hero-unit">
+      <h1>CSS</h1>
+    </div>
+  </header>
+
+  <div class="container-fluid">
+
+    <div class="row-fluid">
+      <nav class="span3 bs-docs-sidebar">
+        <ol class="nav nav-list bs-docs-sidenav">
+          
+          
+                  <li>
+      <a href = "index.html">An Introduction to CSS</a>
+      </li>
+      <li>
+      <a href = "selectors.html">Selectors</a>
+      </li>
+      <li>
+      <a href = "declarations.html">Declarations</a>
+      </li>
+      <li>
+      <a href = "positioning.html">Positioning Elements</a>
+      </li>
+      <li>
+        <a href="classes-and-ids-as-selectors.html">Using Classes and IDs as Selectors</a>
+      </li>
+      <li>
+      <a href = "stylesheets.html">Stylesheets</a>
+      </li>
+      <li>
+        <a href="best-practices.html">Best Practices</a>
+      </li>
+      <li>
+      <a href = "css3.html">CSS3 - The Future is Now</a>
+      </li>
+      <li>
+      <a href = "project.html">Try it Yourself...</a>
+      </li>
+
+          
+        </ol>
+      </nav>
+
+      <div class="span9">
+
+            <article class="row-fluid">
+      <header>
+        <hgroup class="hero-unit">
+          <h1>Declarations</h1>
+        </hgroup>
+      </header>
+
+      <p class="lead">
+        Declarations are like the verbs of CSS. They tell the browser <em>how</em> to change the element. You can change just about anything about an element.
+      </p>
+      <p>here are some examples:</p>
+        <ul>
+            <li>Size: 16px, 12em, large, x-small, 80%</li>
+            <li>Color: red, #E01B6A, rgb(92, 140, 41)</li>
+            <li>Position: top: 100px, position: absolute, float: right</li>
+            <li>Background: green, url(images/bg.jpg), -moz-linear-gradient(top, #1e5799 0%, #7db9e8 100%)[a gradient] </li>
+        </ul>
+        <p>Declarations consist of two parts. </p>
+        <h3>Property</h3>
+        <p>This is <strong>what</strong> about the element should change: color, font size, background</p>
+        <h3>Value</h3>
+        <p>This is what about the element should change <strong>to</strong>: red, x-small, 100px.</p>
+        <h3>The Equation</h3>
+        <p>Selectors, declaration properties and values combine to make a complete CSS rule. The structure you need to use is this: </p>
+        <pre>
+selector {
+&lt;declaration property&gt; : &lt;declaration value&gt; ;
+}
+                       <span class="exampleAside"><i class="icon-arrow-up"></i>the colon separates
+                         the property from
+                         the value
+                                             <i class="icon-arrow-up"></i>the semicolon ends the declaration statement
+<i class="icon-arrow-up"></i>braces enclose the statements</span>
+        </pre>
+        <aside>
+          Technically, you don't need a semicolon on the last line of your CSS rule. The same goes for the braces: if you only have one declaration in your CSS rule, you don't need to use them.
+          But it's a good practice to always include them. It costs next to nothing in effort, and your code won't break if you add additional lines later. 
+        </aside>
+        <pre>
+p {
+    width:        50%;
+    padding:      8px 4px;
+    text-align:   center;
+    margin:       22px 0 22px 15%;
+    color:        navy;
+    font-size:    20px;
+    background:   rgb(250, 201, 110);
+    border:       4px solid #a14016;
+}
+
+
+  <span class="exampleAside"><i class="icon-arrow-up"></i>properties    <i class="icon-arrow-up"></i>values</span>  
+        </pre>
+        <p>Here's an example of a paragraph with no style rules applied. Click the button to apply the style defined above:</p>
+        <hr>
+        <button id="declExampleBtn1" class="btn">Apply style</button>
+        <p id="declExample1">Grumpy wizards make toxic brew for the evil Queen and Jack.</p>
+        <hr>
+        <aside>
+          There are several ways to select colors in CSS. 
+          <ol>
+            <li>
+                Named colors. An example is the text color above set to "navy." You can specify colors by their names: red, purple, green, etc. The obvious disadvantage is that you limited to fewer than 200 color names and must rely on the browser's version of how that color should display.
+            </li>
+            <li>
+                Hexadecimal colors. One is used in the text color example above. The foumla is a pound sign "#" followed by 6 numbers/letters. These are much more specific: you have access to more than 16 million colors using this method. 
+            </li>
+            <li>
+                RGB colors. The background color above uses the RGB color specification. It defines color by specifying the amount of Red, Green and Blue to apply to each pixel. With this method, you can also add a level of transparency to the color, such as <strong>rgba(250, 201, 110, .5)</strong> to apply a 50% alpha transparancy to the color.
+            </li>
+          </ol>
+        </aside>
+      
+      <h3>Styles vs. Elements</h3>
+        <p>A common mistake when learning CSS is thinking that style rules are connected to HTML elements: that an &lt;H1&gt;
+          tag will <em>always</em> display more prominently larger than a &lt;p&gt; tag, for example. This is not
+          true. Web browsers will apply some default styling if none is supplied, but that can always be overridden.
+          Below you see an example of <code>h1</code> and <code>p</code> tags with your browser's default style rules applied. Click
+          the button to override those styles:</p>
+        <button id="declExampleBtn2" class="btn">Apply style</button>
+        <div class="codeExample" id="declExample2">
+            <h1>THIS TEXT IS WRAPPED IN AN H1 TAG</h1>
+            <p>And this text is wrapped in a lowly paragraph tag</p>
+       </div>
+
+        <p>See how the elements are no longer displaying according to the browser's default style rules? Here are the rules that were applied:</p>
+
+<pre>
+p {
+    font-size: 34px;
+    font-variant: small-caps;
+}
+h1 {
+    font-size: 12px;
+    text-transform: lowercase;
+} 
+</pre>
+
+        <p>There are many online sources for looking up different style rules you can use as declarations in your CSS. See the end of this chapter for some of our favorites.</p>
+     
+   
+      <h4>Progress with this chapter</h4>
+      <div class="progress">
+          <div class="bar" style="width: 5%;"></div>
+      </div>           
+
+      
+      <footer>
+        <p>Page last updated by Christine McClure</p>
+      </footer>
+    </article>
+
+
+      </div><!--/.span9 -->
+
+    </div><!--/.row-fluid -->
+
+  </div><!--/.container-fluid-->
+
+  <footer id="page-footer" class="container-fluid">
+    <p>Licensed under Creative Commons. Created by Christine McClure</p>
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/bootstrap.min.js"></script>
+  <script src="/assets/js/bootstrap-transition.js"></script>
+  <script src="/assets/js/prettify/prettify.js"></script>
+
+  
+  <!--Per-page scripts-->
+    
+      <script src="/assets/js/css-chapter-examples.js"></script>
+    
+  
+
+</body>
+</html>
+
