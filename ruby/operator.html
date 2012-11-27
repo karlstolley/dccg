@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ruby: Operation Operator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--Brief page description:-->
+  <meta name="description" content="">
+  <!--Name(s) of primary authors-->
+  <meta name="author" content="Anthony T. Sansone">
+
+  <!--Styles-->
+  <link href="/assets/css/bootstrap.css" rel="stylesheet">
+  <link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="/assets/css/prettify.css" rel="stylesheet">
+
+  <!--Custom styles-->
+  <link href="/assets/css/custom.css" rel="stylesheet">
+
+  
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+
+<body class="ruby">
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+        <a class="brand" href="/">DCCG</a>
+          <ul class="nav">
+            <li><a href="/start/">Setup</a></li>
+            <li><a href="/git/">Git</a></li>
+            <li><a href="/md/">Markdown</a></li>
+            <li><a href="/html/">HTML5</a></li>
+            <li><a href="/css/">CSS</a></li>
+            <li><a href="/js/">Javascript</a></li>
+            <li><a href="/ruby/">Ruby</a></li>
+            <li><a href="/sass/">Sass</a></li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header id="page-header">
+    <div class="container-fluid hero-unit">
+      <h1>Ruby</h1>
+    </div>
+  </header>
+
+  <div class="container-fluid">
+
+    <div class="row-fluid">
+      <nav class="span3 bs-docs-sidebar">
+        <ol class="nav nav-list bs-docs-sidenav">
+          
+          
+                      <li><a href="index.html"><i class="icon-chevron-right"></i> Why Program?</a></li>
+        <li><a href="alreadyknow.html"><i class="icon-chevron-right"></i> What Should You Already Know?</a></li>
+        <li><a href="tolearn.html"><i class="icon-chevron-right"></i> What Should You Learn?</a></li>
+        <li><a href="whyruby.html"><i class="icon-chevron-right"></i> Why Ruby?</a></li>
+        <li><a href="shell.html"><i class="icon-chevron-right"></i> Coming Out of Our Shell</a></li>
+        <li><a href="operator.html"><i class="icon-chevron-right"></i> Operation: Operator</a></li>
+        <li><a href="wordstasks.html"><i class="icon-chevron-right"></i> Words and Tasks</a></li>
+        <li><a href="variations.html"><i class="icon-chevron-right"></i> Variations on a Theme</a></li>
+        <li><a href="writescript.html"><i class="icon-chevron-right"></i> Write the Script</a></li>
+        <li><a href="courselist.html"><i class="icon-chevron-right"></i> Down to Business</a></li>
+        <li><a href="courselistpass1.html"><i class="icon-chevron-right"></i> First Pass at A Course List</a></li>
+        <li><a href="autohtml.html"><i class="icon-chevron-right"></i> Create HTML Automatically</a></li>
+        <li><a href="instanthtml.html"><i class="icon-chevron-right"></i> Instant Course List</a></li>
+        <li><a href="dry.html"><i class="icon-chevron-right"></i> Keep DRY</a></li>
+        <li><a href="hash.html"><i class="icon-chevron-right"></i> That's Some Good Hash</a></li>
+        <li><a href="rollercoasters.html"><i class="icon-chevron-right"></i> Roller Coasters</a></li>
+        <li><a href="classes.html"><i class="icon-chevron-right"></i> Show Some Class</a></li>
+        <li><a href="breakup.html"><i class="icon-chevron-right"></i> Breaking Up Is Hard</a></li>
+        <li><a href="multiples.html"><i class="icon-chevron-right"></i> Once More with Feeling</a></li>
+        <li><a href="writeitout.html"><i class="icon-chevron-right"></i> Write It Out</a></li>
+        <li><a href="review.html"><i class="icon-chevron-right"></i> What Did You Learn?</a></li>
+        <li><a href="resources.html"><i class="icon-chevron-right"></i> Where Can You Learn More?</a></li>
+
+
+
+            
+        </ol>
+      </nav>
+
+      <div class="span9">
+
+        <article id=" ">
+  <header class="page-header">
+    <h2>Operation: Operator</h2>
+  </header>
+  <section>
+
+    <div class="row-fluid">
+      <div class="span8">
+        <p>At the very least, you can use Ruby as a high-powered calculator. If you were to open IRB and type:</p>
+
+<pre class="command-line">
+irb(main):001:0&gt; 2 + 2
+</pre>
+
+        <p>it would return</p>
+
+<pre class="command-line">
+=&gt; 4
+</pre>
+
+        <p>Simple, right? Ruby can do more than add. Try to add and subtract two numbers.</p>
+
+        <p>You probably saw something like this:</p>
+
+<pre class="command-line">
+irb(main):002:0&gt; 2 + 2
+=&gt; 4
+irb(main):003:0&gt; 2 - 2
+=&gt; 0
+</pre>
+
+        <p>You can try to multiply and divide as well. This requires two characters that you may not have seen before: <code>*</code> for multiplication and <code>/</code> for division.</p>
+
+        <p>These characters are known as <strong>operators</strong>.</p>
+
+        <p>Try to multiple, then divide any two numbers.</p>
+
+        <p>You probably saw something like this:</p>
+
+<pre class="command-line">
+irb(main):004:0&gt; 2 / 2
+=&gt; 1
+irb(main):005:0&gt; 2 * 2
+=&gt; 4
+</pre>
+
+    <div class="bs-docs-example">
+        <p>It is possible to square a number as well. This uses the <code>**</code> operator.</p>
+    </div>
+<pre class="command-line">
+irb(main):006:0&gt; 2 ** 3
+=&gt; 8
+irb(main):007:0&gt;
+</pre>
+
+        <p>The fancy calculator is all well and good, but what about text? What if you want to write programs that have words?</p>
+
+      </div>
+
+      <div class="span4">
+      <aside>
+        <dl>
+          <dt>Operator</dt>
+          <dd>Operators compare, assign or change values of given data such as numbers or text. Ruby has 36 operators in its language: 6 arithmetic, 8 comparison, 7 assignment, 6 logical, 6 bitwise, 1 ternary and 2 range. Bitwise, ternary and range operators are not often used and are outside of the scope of this chapter.</dd>
+        </dl>
+      </aside>
+      </div>
+    </div>
+
+  </section>
+  <footer>
+
+  </footer>
+</article>
+
+
+
+      </div><!--/.span9 -->
+
+    </div><!--/.row-fluid -->
+
+  </div><!--/.container-fluid-->
+
+  <footer id="page-footer" class="container-fluid">
+    <div class="span3">
+&nbsp;
+    </div>
+    <div class="span9">
+    
+      <ul class="pager">
+        
+        <li><a href="shell.html">Previous</a></li>
+        
+        
+        <li><a href="wordstasks.html">Next</a></li>
+        
+      </ul>
+    
+    
+      <h5>Progress in This Tutorial</h5>
+      <div class="progress progress-striped">
+        <div class="bar" style="width: 27%;"></div>
+      </div>
+    
+      <p>Licensed under Creative Commons. Created by Anthony T. Sansone</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/bootstrap.min.js"></script>
+  <script src="/assets/js/bootstrap-transition.js"></script>
+  <script src="/assets/js/bootstrap-alert.js"></script>
+  <script src="/assets/js/bootstrap-tab.js"></script>
+  <script src="/assets/js/prettify/prettify.js"></script>
+
+  
+
+</body>
+</html>
+

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ruby: Variations on a Theme</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--Brief page description:-->
+  <meta name="description" content="">
+  <!--Name(s) of primary authors-->
+  <meta name="author" content="Anthony T. Sansone">
+
+  <!--Styles-->
+  <link href="/assets/css/bootstrap.css" rel="stylesheet">
+  <link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="/assets/css/prettify.css" rel="stylesheet">
+
+  <!--Custom styles-->
+  <link href="/assets/css/custom.css" rel="stylesheet">
+
+  
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+
+<body class="ruby">
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+        <a class="brand" href="/">DCCG</a>
+          <ul class="nav">
+            <li><a href="/start/">Setup</a></li>
+            <li><a href="/git/">Git</a></li>
+            <li><a href="/md/">Markdown</a></li>
+            <li><a href="/html/">HTML5</a></li>
+            <li><a href="/css/">CSS</a></li>
+            <li><a href="/js/">Javascript</a></li>
+            <li><a href="/ruby/">Ruby</a></li>
+            <li><a href="/sass/">Sass</a></li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header id="page-header">
+    <div class="container-fluid hero-unit">
+      <h1>Ruby</h1>
+    </div>
+  </header>
+
+  <div class="container-fluid">
+
+    <div class="row-fluid">
+      <nav class="span3 bs-docs-sidebar">
+        <ol class="nav nav-list bs-docs-sidenav">
+          
+          
+                      <li><a href="index.html"><i class="icon-chevron-right"></i> Why Program?</a></li>
+        <li><a href="alreadyknow.html"><i class="icon-chevron-right"></i> What Should You Already Know?</a></li>
+        <li><a href="tolearn.html"><i class="icon-chevron-right"></i> What Should You Learn?</a></li>
+        <li><a href="whyruby.html"><i class="icon-chevron-right"></i> Why Ruby?</a></li>
+        <li><a href="shell.html"><i class="icon-chevron-right"></i> Coming Out of Our Shell</a></li>
+        <li><a href="operator.html"><i class="icon-chevron-right"></i> Operation: Operator</a></li>
+        <li><a href="wordstasks.html"><i class="icon-chevron-right"></i> Words and Tasks</a></li>
+        <li><a href="variations.html"><i class="icon-chevron-right"></i> Variations on a Theme</a></li>
+        <li><a href="writescript.html"><i class="icon-chevron-right"></i> Write the Script</a></li>
+        <li><a href="courselist.html"><i class="icon-chevron-right"></i> Down to Business</a></li>
+        <li><a href="courselistpass1.html"><i class="icon-chevron-right"></i> First Pass at A Course List</a></li>
+        <li><a href="autohtml.html"><i class="icon-chevron-right"></i> Create HTML Automatically</a></li>
+        <li><a href="instanthtml.html"><i class="icon-chevron-right"></i> Instant Course List</a></li>
+        <li><a href="dry.html"><i class="icon-chevron-right"></i> Keep DRY</a></li>
+        <li><a href="hash.html"><i class="icon-chevron-right"></i> That's Some Good Hash</a></li>
+        <li><a href="rollercoasters.html"><i class="icon-chevron-right"></i> Roller Coasters</a></li>
+        <li><a href="classes.html"><i class="icon-chevron-right"></i> Show Some Class</a></li>
+        <li><a href="breakup.html"><i class="icon-chevron-right"></i> Breaking Up Is Hard</a></li>
+        <li><a href="multiples.html"><i class="icon-chevron-right"></i> Once More with Feeling</a></li>
+        <li><a href="writeitout.html"><i class="icon-chevron-right"></i> Write It Out</a></li>
+        <li><a href="review.html"><i class="icon-chevron-right"></i> What Did You Learn?</a></li>
+        <li><a href="resources.html"><i class="icon-chevron-right"></i> Where Can You Learn More?</a></li>
+
+
+
+            
+        </ol>
+      </nav>
+
+      <div class="span9">
+
+        <article id=" ">
+  <header class="page-header">
+    <h2>Variations on a Theme</h2>
+  </header>
+  <section>
+
+    <div class="row-fluid">
+      <div class="span8">
+
+<div class="alert alert-info">
+  <button type="button" class="close" data-dismiss="alert">×</button>
+  <h4>Learning Goal:</h4>
+  Identify Variables. Create Methods.
+</div>
+
+        <p>If you want to say hello to someone else, you would need to provide Ruby (and IRB) with another name.</p>
+
+        <p>That's not as hard as you would think.</p>
+
+        <p>You would need to rewrite your short program to ask for the person's name when the method is called. This will require a placeholder that holds on to the name until it is displayed. This placeholder is called a <strong>Variable</strong>.</p>
+
+    <div class="bs-docs-example">
+        <p>The method would be written like this:</p>
+    </div>
+<pre class="command-line">
+irb(main):015:0&gt; def hello name
+irb(main):016:1&gt;   puts "Hello " + name + "!"
+irb(main):017:1&gt; end
+=&gt; nil
+</pre>
+
+        <p>When you call the method, you would type the name of the method and the person's name in quotes after it:</p>
+
+<pre class="command-line">
+irb(main):018:0&gt; hello "Tony"
+Hello Tony!
+=&gt; nil
+</pre>
+
+        <p>Not too difficult. What if you wanted to ask the person running this small program for their name and say hello?</p>
+
+        <p>That will require you to ask for input, information from the user. Ruby uses the method <code>gets</code> to do this.</p>
+
+        <p>Rewrite the hello method in IRB to ask for the person's name:</p>
+
+<pre class="command-line">
+irb(main):019:0&gt; def hello
+irb(main):020:1&gt;   puts "What is your name?"
+irb(main):021:1&gt;   name = gets
+irb(main):022:1&gt;   puts "Hello " + name + "!"
+irb(main):023:1&gt; end
+=&gt; nil
+</pre>
+
+        <p>Now, when you call <code>hello</code>, you do not need to include the person's name. The program will ask the person for you.</p>
+
+<pre class="command-line">
+irb(main):024:0&gt; hello
+What is your name?
+Tony
+Hello Tony
+!
+=&gt; nil
+irb(main):025:0&gt;
+</pre>
+
+        <p>Almost perfect. What's up with the line break between the person's name and the exclamation point?</p>
+
+        <p>Well, the user put it there. When the user wrote their name, the last character they typed was the Return key. This creates a new line character (<code>\n</code>) that got tacked on the end of the name variable.</p>
+
+        <p>How do you get rid of it?</p>
+
+        <p>Chomp it.</p>
+
+        <p>The Method <code>.chomp</code> allows you to strip away the new line character from the end of any string.</p>
+
+        <p>You will need to rewrite the <code>hello</code> method again in IRB to see this. Give it a try:</p>
+
+<pre class="command-line">
+irb(main):025:0&gt; def hello
+irb(main):026:1&gt;  puts "What is your name?"
+irb(main):027:1&gt;  name = gets.chomp
+irb(main):028:1&gt;  puts "Hello " + name + "!"
+irb(main):029:1&gt; end
+=&gt; nil
+</pre>
+
+        <p>Now, when you call <code>hello</code>, you see:</p>
+
+<pre class="command-line">
+irb(main):030:0&gt; hello
+What is your name?
+Tony
+Hello Tony!
+=&gt; nil
+irb(main):031:0&gt;
+</pre>
+
+        <p>This rewriting of the same program over and over is getting a bit tiring. Next, we move to writing Ruby code in a file that we can edit when we want to make changes.</p>
+
+        <p>Type <code>quit</code> in IRB to exit IRB.</p>
+
+      </div>
+
+      <div class="span4">
+      <aside>
+        <dl>
+          <dt>Variable</dt>
+          <dd>
+          A word that identifies a reusable value in a program.
+
+<pre class="prettyprint linenums">
+x = 6
+name = "Allison"
+</pre>
+
+          </dd>
+        </dl>
+      </aside>
+      </div>
+    </div>
+
+  </section>
+  <footer>
+
+  </footer>
+</article>
+
+
+
+      </div><!--/.span9 -->
+
+    </div><!--/.row-fluid -->
+
+  </div><!--/.container-fluid-->
+
+  <footer id="page-footer" class="container-fluid">
+    <div class="span3">
+&nbsp;
+    </div>
+    <div class="span9">
+    
+      <ul class="pager">
+        
+        <li><a href="wordstasks.html">Previous</a></li>
+        
+        
+        <li><a href="writescript.html">Next</a></li>
+        
+      </ul>
+    
+    
+      <h5>Progress in This Tutorial</h5>
+      <div class="progress progress-striped">
+        <div class="bar" style="width: 36%;"></div>
+      </div>
+    
+      <p>Licensed under Creative Commons. Created by Anthony T. Sansone</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/bootstrap.min.js"></script>
+  <script src="/assets/js/bootstrap-transition.js"></script>
+  <script src="/assets/js/bootstrap-alert.js"></script>
+  <script src="/assets/js/bootstrap-tab.js"></script>
+  <script src="/assets/js/prettify/prettify.js"></script>
+
+  
+
+</body>
+</html>
+

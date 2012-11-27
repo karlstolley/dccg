@@ -2,20 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Git: Specific Element</title>
+  <title>Git: Git Overview</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!--Brief page description:-->
-  <meta name="description" content="">
+  <meta name="description" content="An overview of Git: what it is, what it does.
+">
   <!--Name(s) of primary authors-->
-  <meta name="author" content="">
+  <meta name="author" content="Karl Stolley">
 
   <!--Styles-->
   <link href="/assets/css/bootstrap.css" rel="stylesheet">
   <link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="/assets/css/prettify.css" rel="stylesheet">
 
   <!--Custom styles-->
-  <link href="/assets/css/custom.css">
+  <link href="/assets/css/custom.css" rel="stylesheet">
+
+  
 
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
@@ -24,40 +28,143 @@
 
 </head>
 
-<body>
+<body class="git">
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+        <a class="brand" href="/">DCCG</a>
+          <ul class="nav">
+            <li><a href="/start/">Setup</a></li>
+            <li><a href="/git/">Git</a></li>
+            <li><a href="/md/">Markdown</a></li>
+            <li><a href="/html/">HTML5</a></li>
+            <li><a href="/css/">CSS</a></li>
+            <li><a href="/js/">Javascript</a></li>
+            <li><a href="/ruby/">Ruby</a></li>
+            <li><a href="/sass/">Sass</a></li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header id="page-header">
+    <div class="container-fluid hero-unit">
+      <h1>Git</h1>
+    </div>
+  </header>
 
   <div class="container-fluid">
 
-    <header id="page-header">
-      <h1>Git</h1>
-    </header>
+    <div class="row-fluid">
+      <nav class="span3 bs-docs-sidebar">
+        <ol class="nav nav-list bs-docs-sidenav">
+          
+          
+              <li><a href="/git/">Git Overview</a></li>
+<li><a href="workflow.html">A Git Workflow</a></li>
 
-    <article>
+
+            
+        </ol>
+      </nav>
+
+      <div class="span9">
+
+            <article class="row-fluid">
       <header>
-        <hgroup class="hero-unit">
+        <hgroup>
           <h1>Why Git?</h1>
           <h2>So you never make a mistake again</h2>
         </hgroup>
       </header>
       <section>
-        <p>And so it begins...</p>
+        <p>At first glance, Git seems overwhelming.</p>
+
+        <p>It is. Or rather, it tends to be.</p>
+
+        <p>
+          But if you strip Git down to its essence, there are actually only a few things you do
+          with any regularity.
+        <p>
+        <h2>Start Working</h2>
+        <p>
+          There are two ways to start working in Git: initialize a repository, or clone an existing
+          one.
+        </p>
+        <h2>See What's Up</h2>
+        <p>
+          It's common practice to do the following three things to see what's going on in the
+          repository and your work.
+        </p>
+        <ol>
+          <li>What happened before: <code>git log</code> is ...</li>
+          <li>What's happening now: <code>git status</code> is ...</li>
+          <li>What's about to happen: <code>git diff</code> is ...</li>
+        </ol>
+        <h2>Work, Work, Work</h2>
+        <p>
+          You do work, you add files to be committed (<code>git add</code>) and then you commit
+          them (<code>git commit</code>).
+        </p>
+        <h2>Share with the World</h2>
+        <p>
+          You share your changes with the rest of the world by running <code>git push</code>.
+        </p>
+        <p>
+          You grab changes from the world by running <code>git pull</code>, after specifying
+          who "the world" is by running <code>git remote add</code>.
+        </p>
       </section>
       <footer>
-        <p>Notes, stuff...?</p>
+        <p>Page last updated by Karl Stolley</p>
       </footer>
     </article>
 
-    <footer id="page-footer">
-      <p>Licensed under Creative Commons</p>
-    </footer>
+
+      </div><!--/.span9 -->
+
+    </div><!--/.row-fluid -->
 
   </div><!--/.container-fluid-->
+
+  <footer id="page-footer" class="container-fluid">
+    <div class="span3">
+&nbsp;
+    </div>
+    <div class="span9">
+    
+      <ul class="pager">
+        
+        <li><a href="/">Previous</a></li>
+        
+        
+        <li><a href="workflow.html">Next</a></li>
+        
+      </ul>
+    
+    
+      <h5>Progress in This Tutorial</h5>
+      <div class="progress progress-striped">
+        <div class="bar" style="width: 25%;"></div>
+      </div>
+    
+      <p>Licensed under Creative Commons. Created by Karl Stolley</p>
+    </div>
+  </footer>
 
   <!-- JavaScript
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="/assets/js/jquery.min.js"></script>
   <script src="/assets/js/bootstrap.min.js"></script>
+  <script src="/assets/js/bootstrap-transition.js"></script>
+  <script src="/assets/js/bootstrap-alert.js"></script>
+  <script src="/assets/js/bootstrap-tab.js"></script>
   <script src="/assets/js/prettify/prettify.js"></script>
+
+  
+
 </body>
 </html>
+
