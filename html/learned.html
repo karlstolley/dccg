@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>HTML5: Body and Structure</title>
+  <title>HTML5: What We've Learned</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!--Brief page description:-->
@@ -80,51 +80,69 @@
       <div class="span9">
 
         <article>
+
 <section>
-         
-<h2>Structure</h2>
-    	<h3>Body</h3>
-    		<p> The body of the webpage houses all of the content that is intended to be displayed to the public. The browser renders everything enclosed within the <code class="htmlcode">&lt;body&gt;</code> and <code class="htmlcode">&lt;/body&gt;</code> tags so that it is viewable. All other tags that we learn about go inside the body of the document. </p>
-
-<h3>Tags Used Within the Body</h3>
-    	
-    	<h4>Div</h4>
-<p>The <code class="htmlcode">&lt;div&gt;</code> is a generic container that is used when none of the other tags appropriately define the information contained. They are used most often with CSS.</p>
-
-<h4>Section</h4>
-    		<p>The <code class="htmlcode">&lt;section&gt;</code> tag is used to group like content together. Sections could be nested or stand alone. Usually, the sections contain headers and footers. 
-       	 
-       	 <h4>Article</h4>
-			<p> The <code class="htmlcode">&lt;article&gt;</code> tag is used for grouped information within sections. These are usually not nested unless they are nested within sections of other sections [aside: to see more about nesting, go to Nesting].
-			
-    	<h4>Paragraph</h4>
-   			<p>The <code class="htmlcode">&lt;p&gt;</code> tag is probably the most common tag you will see in a document, simply because it defines the portion of text that should be displayed as a paragraph. It is possible for a very simple page to be composed simply of <code class="htmlcode">&lt;p&gt;</code><code class="htmlcode"> &lt;/p&gt;</code> elements, however, it is very limited and it doesn't tell you much about the information enclosed. Also, when we start to style the page using CSS, other tags, such as section and article help better define parts of the webpage.</p>
-   	 	
-   		<h4>Navigation</h4>
-   			<p> The <code class="htmlcode">&lt;nav&gt;</code> <code class="htmlcode">&lt;/nav&gt;</code> tag groups navigation links together. These links are usually presented as an unordered list. We will discuss lists in more detail in the next section, but for now it is important to not that all navigation should be distinguished from other parts of the page with the <code class="htmlcode">&lt;nav&gt;</code> <code class="htmlcode">&lt;/nav&gt;</code>. <aside>To see more about links go to Links and Images</aside>.
-
-   		<h4>Footer</h4>
-    		<p> The footer comes at the end of a section or the page with extra information. </p>
  
-
-    <h4>Details</h4>
-    
-    
-      <h2>Your Turn</h2>
-   <p>Now that you have all of the elements you need to create the overall structure of the webpage, what will you include in yours?</p>
-   <ul>
-   <li>What are the major sections, or components of your webpage?</li>
-   <li>What text do you want to include?</li>
-   <li>Are there any comments or notes you would like to make for yourself or others to help you remember something important (or not so important)?</li>
-   </ul>
-<h5> Next up, <a href="images.html">Images and Links. </a> </h5>
- 
-      </section>
      
+    <div class="row">
+          <div class="span12">
+           <div class="row">
+          
+         
+          <article class="span8">
+               <h2>What We've Learned</h2>
+
+    	<p>So let's see if we could put together everything we've learned about HTML5. </p>
+    	<p> We've learned about building a webpage involves many small components that work together to create a substantial infrastructure.<p>
+    	<p> Your final project should look something like this, but with your information, of course.</p>
+    	
+    	<h3>More Practice</h3>
+    	Ok, so how can you know if you really understand it? Try moving some of the elements around to rearrange the infrastructure of the webpage. Please note that some of the elements cannot and should not be moved around (e.g. head, body, main navigation, etc.) If you are unsure about why, review the sections on <a href="structure.html">Structure and Layout</a>. 
+    	<p>How about if you moved the table above the image? Or the bulleted list below the table? Hint: Remember the rules of bookends and nesting.</p>	
+      
+      <h3> Have We Met Our Learning Objectives</h3>
+<p>Have we met the learning objectives we set forth at the beginning of this chapter?</p>
+<ul >
+        	<li>Learn how to create a basic web page.</li>
+        	<li>Become familiar with HTML5 tags, attributes, and elements.</li>
+        	<li>Understand what each of the following “tags" does and how to use them.</li>
+        		<ul class="three-col">
+        			<li> &lt;!DOCTYPE html&gt;</li>
+        			<li> &lt;html&gt; </li>
+        			<li> &lt;head&gt;  </li>
+        			<li> &lt;title&gt; </li>
+        			<li> &lt;meta&gt; </li>
+        			<li> &lt;link&gt; </li>
+        			<li> &lt;body&gt; </li>
+        			<li> &lt;header&gt; </li>
+        			<li> &lt;article&gt; </li>
+        			<li> &lt;section&gt; </li>
+        			<li> &lt;footer&gt; </li>
+        			<li> &lt;a&gt; </li>
+        			<li> &lt;img&gt; </li>
+        			<li> &lt;table&gt; </li>
+        			<li> &lt;p&gt; </li>
+        			<li> &lt;nav&gt; </li>
+        			<li> &lt;ol&gt; </li>
+        			<li> &lt;ul&gt;</li>
+        			<li> &lt;li&gt; </li>
+        			<li> &lt;row&gt; </li>
+        		</ul>
+        	
+        </ul>
+     
+     <h5>Congratulations! You've learned HTML5.</h5>
+     <h6>If you are comfortable with what you've learned and feel you've accomplished the learning objectives of this chapter, visit the next page to find additional resources for learning HTML5 or continue on to learn about how to make your webpage beautiful with CSS.</h6> 
+      </article>
+     
+    </section>
 
  <footer>
 
 </footer>
+
+</div>
+  </div><!--/.container-fluid-->
 
 </article>
 
@@ -140,17 +158,17 @@
     
       <ul class="pager">
         
-        <li><a href="head.html">Previous</a></li>
+        <li><a href="tables.html">Previous</a></li>
         
         
-        <li><a href="structuretwo.html">Next</a></li>
+        <li><a href="learnmore.html">Next</a></li>
         
       </ul>
     
     
       <h5>Progress in This Tutorial</h5>
       <div class="progress progress-striped">
-        <div class="bar" style="width: 40%;"></div>
+        <div class="bar" style="width: 95%;"></div>
       </div>
     
       <p class="alert alert-info">

@@ -81,51 +81,93 @@
 
         <article>
 <section>
+                    
+      <div class="row">
+          <div class="span12">
+           <div class="row">
+          
          
-<h2>Structure</h2>
+          <article class="span8">
+<p class="lead"> Now that we've learned most of the structural elements that go into creating the body of a webpage, let's discuss the rules for making sure each element is correctly displayed.</p>
+
+
+<h2>Hierarchy</h2>
+
+<p>Hierarchy, as a concept, is an expansion of what we  have learned already in regards to HTML tags as bookends--an opening (start) tag and a closing (end) tag are needed in order for the browser to know when a command begins and ends. But what happens if you want a command not to end and you want another to begin? Let's take a look at an example of when we might want that.
+
+Sample
+<pre class="prettyprint">
+&lt;div&gt;
+&lt;ol&gt;
+
+
+As you can see above, . The tag used most recently will the tag you close first. The more tags you use, the more you have to close before completing the structure. If you don't close a tag, you may have part of your content bleeding into the next, and that's just one of the ways thing can go awry if you don't close your tags correctly.
+
+
+Below is a common aid for visualizing the DOM.</p>
+
+<p>Although the hierarchy is always in place, a few of the tags that are used most often in this are the section and article tags.
     	<h3>Body</h3>
-    		<p> The body of the webpage houses all of the content that is intended to be displayed to the public. The browser renders everything enclosed within the <code class="htmlcode">&lt;body&gt;</code> and <code class="htmlcode">&lt;/body&gt;</code> tags so that it is viewable. All other tags that we learn about go inside the body of the document. </p>
-
-<h3>Tags Used Within the Body</h3>
+    		
     	
-    	<h4>Div</h4>
-<p>The <code class="htmlcode">&lt;div&gt;</code> is a generic container that is used when none of the other tags appropriately define the information contained. They are used most often with CSS.</p>
-
-<h4>Section</h4>
-    		<p>The <code class="htmlcode">&lt;section&gt;</code> tag is used to group like content together. Sections could be nested or stand alone. Usually, the sections contain headers and footers. 
+    	<h4>Section</h4>
+    		
+    
+    	<h4>Header</h4>
+			
        	 
        	 <h4>Article</h4>
-			<p> The <code class="htmlcode">&lt;article&gt;</code> tag is used for grouped information within sections. These are usually not nested unless they are nested within sections of other sections [aside: to see more about nesting, go to Nesting].
 			
     	<h4>Paragraph</h4>
-   			<p>The <code class="htmlcode">&lt;p&gt;</code> tag is probably the most common tag you will see in a document, simply because it defines the portion of text that should be displayed as a paragraph. It is possible for a very simple page to be composed simply of <code class="htmlcode">&lt;p&gt;</code><code class="htmlcode"> &lt;/p&gt;</code> elements, however, it is very limited and it doesn't tell you much about the information enclosed. Also, when we start to style the page using CSS, other tags, such as section and article help better define parts of the webpage.</p>
-   	 	
-   		<h4>Navigation</h4>
-   			<p> The <code class="htmlcode">&lt;nav&gt;</code> <code class="htmlcode">&lt;/nav&gt;</code> tag groups navigation links together. These links are usually presented as an unordered list. We will discuss lists in more detail in the next section, but for now it is important to not that all navigation should be distinguished from other parts of the page with the <code class="htmlcode">&lt;nav&gt;</code> <code class="htmlcode">&lt;/nav&gt;</code>. <aside>To see more about links go to Links and Images</aside>.
+   			
+   	 	<h4>H1, H2, H3, H4, H5, and H6</h4>
+		<h2>Nesting</h2>
 
+   		<h4>Navigation</h4>
+   			<p> The <code>&lt;nav&gt;</code> <code>&lt;/nav&gt;</code> tag groups navigation links together. These links are usually presented as an unordered list (see below). [to see more about links go to Links and Images].
+   		
+   		<h4>Unordered and Ordered Lists</h4>
+   			<p> Lists are used with surprising frequency when building webpages. The most common use is with navigation links but there are also other instances, such as the assumptions and learning objectives at the start of this tutorial. Lists help display information in an attractive and easy to read format, without the need for styling (though it's always looks better with a little style, see CSS).</p>
+   			<p> There are two different tags for lists, depending on how you would like the information displayed: <code>&lt;ul&gt;</code> and <code>&lt;ol&gt;</code>. The <code>&lt;ul&gt;</code> tag is used when you do not want do put the information in any particular number order; it means unordered list. Depending on your styles or, if defined in styles, the browser default, a simple round bullet point precedes each item in the list. The <code>&lt;ol&gt;</code>, or ordered list, tag is used when you want the information to be displayed in order and using a number. The browser will automatically list the items in order 1, 2, 3, 4, etc, based on how you list it in the code. </p>
+   			<p> In both cases, for each individual listed item you need to use the opening tag <code>&lt;li&gt;</code> and the closing tag <code>&lt;/li&gt;</code>.</p>
+   			<p> Let's take a look at a example of each type of list.</p>
+
+   		
    		<h4>Footer</h4>
     		<p> The footer comes at the end of a section or the page with extra information. </p>
+    	
+    	<h4>Div tag</h4>
+<p>The <code>&lt;div&gt;</code> is a generic container that is used when none of the other tags appropriately define the information contained. They are used more often than not with CSS.</p>
  
+ </article>
 
-    <h4>Details</h4>
+<article class="span8 offset2">
+<h3> Structure At-a-Glance </h3>
+<table>
+<tr>
+<td>Tag</td>
+<td>Uses</td>
+<td>Do Not Use</td>
+</tr>
+</table>
+
+
+
     
-    
-      <h2>Your Turn</h2>
-   <p>Now that you have all of the elements you need to create the overall structure of the webpage, what will you include in yours?</p>
-   <ul>
-   <li>What are the major sections, or components of your webpage?</li>
-   <li>What text do you want to include?</li>
-   <li>Are there any comments or notes you would like to make for yourself or others to help you remember something important (or not so important)?</li>
-   </ul>
+      
 <h5> Next up, <a href="images.html">Images and Links. </a> </h5>
  
+  </article>  
       </section>
      
 
  <footer>
 
 </footer>
-
+</div>
+</div>
+</div>
+  </div><!--/.container-fluid-->
 </article>
 
 
@@ -140,17 +182,17 @@
     
       <ul class="pager">
         
-        <li><a href="head.html">Previous</a></li>
+        <li><a href="structure.html">Previous</a></li>
         
         
-        <li><a href="structuretwo.html">Next</a></li>
+        <li><a href="images.html">Next</a></li>
         
       </ul>
     
     
       <h5>Progress in This Tutorial</h5>
       <div class="progress progress-striped">
-        <div class="bar" style="width: 40%;"></div>
+        <div class="bar" style="width: 45%;"></div>
       </div>
     
       <p class="alert alert-info">
