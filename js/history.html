@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript: History of JavaScript</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--Brief page description:-->
+  <meta name="description" content="">
+  <!--Name(s) of primary authors-->
+  <meta name="author" content="Matthew Heston">
+
+  <!--Styles-->
+  <link href="/assets/css/bootstrap.css" rel="stylesheet">
+  <link href="/assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="/assets/css/prettify.css" rel="stylesheet">
+
+  <!--Custom styles-->
+  <link href="/assets/css/custom.css" rel="stylesheet">
+
+  
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+
+<body class="javascript">
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+        <a class="brand" href="/">DCCG</a>
+          <ul class="nav">
+            <li><a href="/start/">Setup</a></li>
+            <li><a href="/git/">Git</a></li>
+            <li><a href="/md/">Markdown</a></li>
+            <li><a href="/html/">HTML5</a></li>
+            <li><a href="/css/">CSS</a></li>
+            <li><a href="/js/">Javascript</a></li>
+            <li><a href="/ruby/">Ruby</a></li>
+            <li><a href="/sass/">Sass</a></li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header id="page-header">
+    <div class="container-fluid hero-unit">
+      <h1>JavaScript</h1>
+    </div>
+  </header>
+
+  <div class="container-fluid">
+
+    <div class="row-fluid">
+      <nav class="span3 bs-docs-sidebar">
+        <ol class="nav nav-list bs-docs-sidenav">
+          
+          
+              <li><a href="/js/index.html">Introduction</a></li>
+<li><a href="/js/history.html">History of JavaScript</a></li>
+<li><a href="/js/repl.html">Accessing the REPL</a></li>
+<li><a href="/js/repl.html">Introduction to Programming Concepts</a></li>
+<li><a href="/js/objects.html">Objects</a></li>
+<li><a href="/js/dom.html">The DOM</a></li>
+<li><a href="/js/scriptfiles.html">Script Tags and Script Files</a></li>
+<li><a href="/js/jquery.html">jQuery</a></li>
+<li><a href="/js/jquery.html">Test Your Knowledge</a></li>
+
+            
+        </ol>
+      </nav>
+
+      <div class="span9">
+
+        <article class="row-fluid">
+<header>
+<hgroup class="hero-unit">
+<h1>History of JavaScript</h1>
+</hgroup>
+</header>
+<section class="span8 offset3 clearfix">
+
+<h2>By the End of this Section You Should Be Able To...</h2>
+<ul>
+  <li>Explain the difference between ECMAScript and JavaScript</li>
+  <li>List different JavaScript implementations of different browsers.</li>
+</ul>
+
+<h2>A history of JavaScript</h2>
+
+<p>
+You don't need to know a whole lot about the history of JavaScript,
+but it's useful to learn a few things just to be familiar with some
+of the terms you might encounter as you read more about it.
+</p>
+
+<p>
+JavaScript was invented by a guy named Brendan Eich for Netscape
+back in the 1990's. Netscape was the maker of a web browser, so at
+that time, they made a competitor product to Microsoft's Internet
+Explorer. It was originally called <em>Mocha</em> and <em>LiveScript</em>,
+and the name JavaScript was finally chosen mostly for marketing reasons,
+since the Java programming language was becoming popular at that time.
+</p>
+
+<p>
+Microsoft wanted to be able to support similar functionality in Internet
+Explorer, so they added a language called <em>JScript</em> to their
+browser. JScript was similar to JavaScript, but not necessarily completely
+compatible. By the mid 90's, it was clear that having a scripting language
+in the browser was important, but that it would be too much of a hassle
+to have to support different implementations in different browsers. So
+a standard was written for the language. The standards body resposnible
+for this standard is called ECMA, so the standard for the language is
+called ECMAScript.
+</p>
+
+<p>
+So, what can we learn from this history?
+<ul>
+  <li>JavaScript has almost nothing to do with Java, besides sharing a name.
+  So if you don't know Java, don't think you're behind in learning JavaScript.
+  If you do know Java, you might be a little more comfortable reading some JavaScript,
+  but you shouldn't assume things work the same -- these are two different languages.</li>
+  <li>There is a standard for JavaScript, but each browser still has their own
+  JavaScript engine that implements that standard. Mozilla's JavaScript engine is
+  called SpiderMoney. Google's JavaScript engine is called V8. This shouldn't matter
+  for this tutorial, but if you run into these names when you are reading about JavaScript,
+  they just refer to different browsers.</li>
+  <li>Although there is a standard, certain browsers might not follow the standard
+  completely. Everything we'll do in this tutorial should work in all modern web
+  browsers, and for the most part, most JavaScript scripts that follow the standard
+  should also work. But it is worth keeping in mind that there are still differences
+  between browsers, so as you read more about JavaScript on the web, you might notice
+  some people being annoyed with with these differences.</li>
+  <li>ECMAScript refers to the standard, and JavaScript refers to browsers'
+  implementation of that standard. The latest edition of ECMAScript is 5.1,
+  and most modern web browsers will support that standard. We won't be doing
+  anything too fancy that was introduced in the newest version, but it's important
+  to know that if you're interested in the direction that JavaScript is heading,
+  you should see what proposals are being made for the next version of ECMAScript.</li>
+</ul>
+</p>
+
+<h2>What's next?</h2>
+<p>
+Now that you have an idea of what you can do with JavaScript and
+know a little bit about it's history, we're ready to dive in. In
+the next section, we'll figure out how to access your web browser's
+JavaScript console. That will let us learn more about JavaScript
+in an interactive environment. You'll type in some commands to
+the console to add some interactive features to this web page,
+and in the sections that follow we'll examine more in depth
+what those things were that you typed in, and in the process
+learn more about JavaScript the language and how it relates to
+something called the DOM. Finally, after getting an idea
+on some of the language features of JavaScript and how to do
+DOM scripting, we'll take a look at jQuery, a popular JavaScript
+framework that simplifies common tasks in JavaScript.
+</p>
+</section>
+<footer class="span8 offset3">
+<p>Page last updated by Matthew Heston</p>
+</footer>
+</article>
+
+
+      </div><!--/.span9 -->
+
+    </div><!--/.row-fluid -->
+
+  </div><!--/.container-fluid-->
+
+  <footer id="page-footer" class="container-fluid">
+    <div class="span3">
+&nbsp;
+    </div>
+    <div class="span9">
+    
+    
+      <p>Licensed under Creative Commons. Created by Matthew Heston</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/bootstrap.min.js"></script>
+  <script src="/assets/js/bootstrap-transition.js"></script>
+  <script src="/assets/js/bootstrap-alert.js"></script>
+  <script src="/assets/js/bootstrap-tab.js"></script>
+  <script src="/assets/js/prettify/prettify.js"></script>
+
+  
+
+</body>
+</html>
+
